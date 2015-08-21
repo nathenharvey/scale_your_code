@@ -1,4 +1,4 @@
-<h1>Hello, Chris!</h1>
+<h1>Hello, <%= node['webserver']['greeting'] %>!</h1>
 
 <p>
 <%= node['ec2']['ami_id'] %>
