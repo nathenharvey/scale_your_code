@@ -9,3 +9,9 @@ validation_client_name   "nharveysyc-validator"
 validation_key           "#{current_dir}/nharveysyc-validator.pem"
 chef_server_url          "https://api.opscode.com/organizations/nharveysyc"
 cookbook_path            ["#{current_dir}/../cookbooks"]
+
+knife[:aws_ssh_key_id]  = ENV['AWS_KEYPAIR_NAME']
+knife[:aws_access_key_id]  = ENV['AWS_ACCESS_KEY_ID']
+knife[:aws_secret_access_key] = ENV['AWS_SECRET_ACCESS_KEY']
+knife[:region] = ENV['AWS_REGION']
+
