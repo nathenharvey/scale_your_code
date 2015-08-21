@@ -17,6 +17,6 @@ suites:
     run_list:
       - recipe[webserver::default]
     attributes:
-      - ec2:
+      ec2:
         ami_id: foo
         local_hostname: bar
